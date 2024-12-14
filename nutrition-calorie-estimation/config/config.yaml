@@ -1,0 +1,20 @@
+data:
+  sequence_length: 200
+  batch_size: 16
+  num_workers: 2
+  pca_components: 10
+
+model:
+  vit_pretrained: true
+  vit_output_dim: 32
+  vit_freeze_backbone: true
+  save_path: "/content/nutrition-calorie-estimation/checkpoints/multimodal_calorie_predictor_rmsre.pth"
+
+training:
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.01
+  plot_save_path: "/content/nutrition-calorie-estimation/outputs/train_val_loss_curve.png"
+
+prediction:
+  save_path: "/content/nutrition-calorie-estimation/outputs/lunch_calories_predictions.csv"
